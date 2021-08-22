@@ -17,11 +17,12 @@ async function createTicketWL(interaction){
     };
 
     server.channels.create(channelName, { reason: `${tUser.tag} izveidoja jaunu ticketu` }).then(channel => {
-        let category = server.channels.cache.find(c => c.id == "878768875569831976" && c.type == "GUILD_CATEGORY");
+        let category = server.channels.cache.find(c => c.id == "878957146165878815" && c.type == "GUILD_CATEGORY");
         
         let justCreatedEm = new MessageEmbed()
         .setColor(yellow)
-        .setDescription(`Sveicināts <@${tUser.id}>, kāds no administrācijas drīz ieradīsies, lai tev palīdzētu!`)
+        .setDescription(`Sveicināts <@${tUser.id}>, kāds no administrācijas drīz ieradīsies, lai tev palīdzētu!
+        Kamēr gaidi, apraksti savu problēmu.`)
         .setFooter(server.name, server.iconURL())
         .setTimestamp(new Date());
 
@@ -72,7 +73,7 @@ async function createTicketIP(interaction){
         let justCreatedEm = new MessageEmbed()
         .setColor(yellow)
         .setDescription(stripIndents`Sveicināts <@${tUser.id}>, kāds no administrācijas drīz ieradīsies, lai tev palīdzētu!
-        Kamēr gaidi, apraksti savu problēmu. 
+        Kamēr gaidi, apraksti savu problēmu.
         Savu IP adresi var atrast [**šeit**](https://whatismyipaddress.com).`)
         .setFooter(server.name, server.iconURL())
         .setTimestamp(new Date());
