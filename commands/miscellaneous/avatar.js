@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         embed.setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
     };
     
-    message.channel.send({ embeds: [embed] }).then(m => m.delete({timeout: 15000}));
+    message.channel.send({ embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 20000)})
 };
 
 module.exports.config = {
