@@ -16,7 +16,7 @@ async function createTicketWL(interaction){
         return;
     };
 
-    server.channels.create(channelName, { reason: `${tUser.tag} izveidoja jaunu ticketu` }).then(channel => {
+    server.channels.create(channelName, { reason: `${tUser.tag} izveidoja jaunu ticketu` }).then(async (channel) => {
         let category = server.channels.cache.find(c => c.id == "878957146165878815" && c.type == "GUILD_CATEGORY");
         
         let justCreatedEm = new MessageEmbed()
@@ -68,7 +68,7 @@ async function createTicketIP(interaction){
         return;
     };
 
-    server.channels.create(channelName, { reason: `${tUser.tag} izveidoja jaunu ticketu` }).then(channel => {
+    server.channels.create(channelName, { reason: `${tUser.tag} izveidoja jaunu ticketu` }).then(async (channel) => {
         let category = server.channels.cache.find(c => c.id == "878768875569831976" && c.type == "GUILD_CATEGORY");
         
         let justCreatedEm = new MessageEmbed()
