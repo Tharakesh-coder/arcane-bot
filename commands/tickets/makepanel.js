@@ -21,9 +21,6 @@ module.exports.run = async (bot, message, args) => {
         .setLabel('Izveidot WL ticketu')
         .setStyle('SECONDARY')
         .setEmoji('✉'),
-    );
-    let row2 = new MessageActionRow()
-    .addComponents(
         new MessageButton()
         .setCustomId('createticketip')
         .setLabel('Izveidot IP ticketu')
@@ -31,9 +28,9 @@ module.exports.run = async (bot, message, args) => {
         .setEmoji('✉'),
     );
     if(mChannel){
-        mChannel.send({ embeds: [embed], components: [row, row2] })
+        mChannel.send({ embeds: [embed], components: [row] })
     } else {
-        message.channel.send({ embeds: [embed], components: [row, row2] })
+        message.channel.send({ embeds: [embed], components: [row] })
     };
 };
 
