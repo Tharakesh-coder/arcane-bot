@@ -8,17 +8,17 @@ module.exports.run = async (bot, message, args) => {
     let embed = new MessageEmbed()
     .setColor(bot.colors.d_blue)
     if (member === message.member){
-        embed.setImage(message.member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setAuthor(`${message.member.user.username} avatar.`, message.member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setDescription(`[Links uz bildi](${message.member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })})`)
+        embed.setImage(message.member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+        embed.setAuthor(`${message.member.user.username} avatar.`, message.member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+        embed.setDescription(`[Links uz bildi](${message.member.user.displayAvatarURL({ dynamic: true, size: 4096 })})`)
         embed.setTimestamp(new Date())
-        embed.setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
+        embed.setFooter(message.author.username, message.author.displayAvatarURL({ dynamic: true, size: 4096 }))
     } else {
-        embed.setImage(member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setAuthor(`${member.user.username} avatar.`, member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setDescription(`[Links uz bildi](${member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })})`)
+        embed.setImage(member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+        embed.setAuthor(`${member.user.username} avatar.`, member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+        embed.setDescription(`[Links uz bildi](${member.user.displayAvatarURL({ dynamic: true, size: 4096 })})`)
         embed.setTimestamp(new Date())
-        embed.setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
+        embed.setFooter(message.author.username, message.author.displayAvatarURL({ dynamic: true, size: 4096 }))
     };
     
     message.channel.send({ embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 20000)})
