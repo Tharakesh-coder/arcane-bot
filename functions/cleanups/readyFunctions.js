@@ -9,7 +9,7 @@ async function nowReady(bot){
        await wait(1000);
 
        // Ready log
-       log(chalk`{gray [${dateNow}]} {green Starting up}{rgb(255,255,255) ...}`);
+       log(chalk`\n{gray [${dateNow}]} {green Starting up}{rgb(255,255,255) ...}`);
        log(chalk`{gray [${dateNow}]} {green Started}{rgb(255,255,255) !}`);
        log(chalk`{rgb(255, 216, 0) ·········································}`)
 
