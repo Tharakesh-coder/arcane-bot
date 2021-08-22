@@ -14,9 +14,9 @@ module.exports.run = async (bot, message, args) => {
         embed.setTimestamp(new Date())
         embed.setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
     } else {
-        embed.setImage(member.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setAuthor(`${member.username} avatar.`, member.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
-        embed.setDescription(`[Links uz bildi](${member.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })})`)
+        embed.setImage(member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
+        embed.setAuthor(`${member.user.username} avatar.`, member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
+        embed.setDescription(`[Links uz bildi](${member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })})`)
         embed.setTimestamp(new Date())
         embed.setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 }))
     };
