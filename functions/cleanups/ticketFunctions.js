@@ -39,15 +39,15 @@ async function createTicketWL(interaction){
         channel.permissionOverwrites.set([
             { 
                 id: tUser.id,
-                allow: ['SEND_MESSAGES', 'ADD_REACTIONS', 'VIEW_CHANNEL'],
+                allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
             },
             { 
                 id: role.id,
-                allow: ['SEND_MESSAGES', 'ADD_REACTIONS', 'VIEW_CHANNEL']
+                allow: ['SEND_MESSAGES', 'VIEW_CHANNEL']
             },
             {
                 id: channel.guild.roles.everyone,
-                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES']
+                deny: ['SEND_MESSAGES', 'VIEW_CHANNEL']
             }
         ]);
         channel.send({ content: `<@${tUser.id}>`, embeds: [justCreatedEm], components: [row] })
@@ -92,15 +92,15 @@ async function createTicketIP(interaction){
         channel.permissionOverwrites.set([
             { 
                 id: tUser.id,
-                allow: ['SEND_MESSAGES', 'ADD_REACTIONS', 'VIEW_CHANNEL'],
+                allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
             },
             { 
                 id: role.id,
-                allow: ['SEND_MESSAGES', 'ADD_REACTIONS', 'VIEW_CHANNEL']
+                allow: ['SEND_MESSAGES', 'VIEW_CHANNEL']
             },
             {
                 id: channel.guild.roles.everyone,
-                deny: ['VIEW_CHANNEL', 'SEND_MESSAGES']
+                deny: ['SEND_MESSAGES', 'VIEW_CHANNEL']
             }
         ]);
         channel.send({ content: `<@${tUser.id}>, <@&${adminRole.id}>`, embeds: [justCreatedEm], components: [row] })
