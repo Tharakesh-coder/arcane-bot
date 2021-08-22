@@ -51,6 +51,7 @@ async function createTicketWL(interaction){
             }
         ]);
         channel.send({ content: `<@${tUser.id}>`, embeds: [justCreatedEm], components: [row] })
+        await i.reply({ content: `Tavs tickets tika izveidots! <#${channel.id}>`, ephemeral: true })
     }).catch(console.error);
 };
 async function createTicketIP(interaction){
@@ -103,6 +104,7 @@ async function createTicketIP(interaction){
             }
         ]);
         channel.send({ content: `<@${tUser.id}>, <@&${adminRole.id}>`, embeds: [justCreatedEm], components: [row] })
+        await i.reply({ content: `Tavs tickets tika izveidots! <#${channel.id}>`, ephemeral: true })
     }).catch(console.error);
 };
 
