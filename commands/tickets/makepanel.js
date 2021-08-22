@@ -17,15 +17,23 @@ module.exports.run = async (bot, message, args) => {
     let row = new MessageActionRow()
     .addComponents(
         new MessageButton()
-        .setCustomId('createticket')
-        .setLabel('Izveidot ticketu')
+        .setCustomId('createticketwl')
+        .setLabel('Izveidot WL ticketu')
+        .setStyle('SECONDARY')
+        .setEmoji('✉'),
+    );
+    let row2 = new MessageActionRow()
+    .addComponents(
+        new MessageButton()
+        .setCustomId('createticketip')
+        .setLabel('Izveidot IP ticketu')
         .setStyle('SECONDARY')
         .setEmoji('✉'),
     );
     if(mChannel){
-        mChannel.send({ embeds: [embed], components: [row] })
+        mChannel.send({ embeds: [embed], components: [row, row2] })
     } else {
-        message.channel.send({ embeds: [embed], components: [row] })
+        message.channel.send({ embeds: [embed], components: [row, row2] })
     };
 };
 

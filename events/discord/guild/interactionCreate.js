@@ -6,8 +6,11 @@ module.exports = async (bot, interaction) => {
     if (!i.isButton()) return;
     
     /* Ticketi */
-    if(i.customId === 'createticket'){
-		f.createTicket(interaction)
+    if(i.customId === 'createticketwl'){
+		f.createTicketWL(interaction)
+	};
+    if(i.customId === 'createticketip'){
+		f.createTicketIP(interaction)
 	};
     if(i.customId === 'deleteticket'){
         f.deleteTicket(interaction)
