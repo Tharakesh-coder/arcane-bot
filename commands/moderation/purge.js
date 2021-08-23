@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     if(amount == 1) text = "ziņu";
 
     let embed = new MessageEmbed()
-    .setDescription(`Isdzēš **${amount}** ${text}! ♻`)
+    .setDescription(`Dzēš **${amount}** ${text}! ♻`)
     .setColor(bot.colors.red)
     .setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
     .setTimestamp(new Date())
