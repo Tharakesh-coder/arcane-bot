@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.guild.me.permissions.has("BAN_MEMBERS")) return message.channel.send({ content: "Man nav pieeju šādai darbībai!" }).then(m => { setTimeout(() => m.delete(), 5000)});
 
-    let modLog = bot.channels.cache.get('627837402307756033');
+    let modLog = bot.channels.cache.get('676439127909990440');
 
     let unbanetPublic = new MessageEmbed()
     .setColor(bot.colors.red)
@@ -30,9 +30,9 @@ module.exports.run = async (bot, message, args) => {
     .setTimestamp(new Date())
     .setFooter(bot.user.username, bot.user.displayAvatarURL());
 
-    message.guild.members.unban(bMember, reason).catch(err => console.log(err));
-    modLog.send({embeds: [modLogEm] });
-    message.channel.send({embeds: [unbanetPublic] }).then(m => { setTimeout(() => m.delete(), 5000)});
+    message.guild.bans.remove(bMember, reason).catch(err => console.log(err));
+    modLog.send({ embeds: [modLogEm] });
+    message.channel.send({ embeds: [unbanetPublic] }).then(m => { setTimeout(() => m.delete(), 5000)});
 }
 
 module.exports.config = {

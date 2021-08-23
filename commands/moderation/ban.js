@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
 
     const modLog = bot.channels.cache.get('676439127909990440');
     if(bMember.user.bot === true){
-        message.guild.members.ban(bMember, { days: 7, reason: reason }).catch(err => console.log(err));
+        message.guild.bans.create(bMember, { days: 7, reason: reason }).catch(err => console.log(err));
     } else {
         bMember.send({ embeds: [banetDMEm] }).then(() => message.guild.members.ban(bMember, { days: 7, reason: reason })).catch(err => console.log(err));
     };
