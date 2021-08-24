@@ -7,16 +7,14 @@ module.exports = async (bot, message) => {
        if(!message.guild) return;
        if(message.guild.id == 873141467999240222) return;
 
-       let staffRole = message.member.roles.cache.find(r => r.name === "STAFF");
+       let staffRole = message.member.roles.cache.some(r => r.id === "719509669088985139")
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
               if(staffRole) return;
                      
-              if(staffRole == null || !staffRole){
-                     await message.react("<a:6181_check:718439373233717308>"); 
-                     await message.react("<:x_:718439672467947581>");
-              };
+              message.react("<a:6181_check:718439373233717308>"); 
+              message.react("<:x_:718439672467947581>");
        };
 
        prefix = default_prefix;
