@@ -7,11 +7,11 @@ module.exports = async (bot, message) => {
        if(!message.guild) return;
        if(message.guild.id == "873141467999240222") return;
 
-       let staffRoleUsers = message.guild.roles.cache.find(role => role.id === '719509669088985139').members.map(m => m.user.id);
+       let staffRole = message.guild.roles.cache.get("719509669088985139");
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
-              if(message.author.id == staffRoleUsers) return;
+              if(message.author.roles.cache.has(staffRole.id)) return;
 
               message.react("<a:6181_check:718439373233717308>");
               message.react("<:x_:718439672467947581>");
