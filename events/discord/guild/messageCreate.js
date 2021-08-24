@@ -6,7 +6,7 @@ module.exports = async (bot, message) => {
 
        if(!message.guild) return;
 
-       let staffRoleUsers = message.guild.roles.cache.get('719509669088985139').members.map(m => m.user.id);
+       let staffRoleUsers = message.guild.roles.cache.get('719509669088985139').members.map(m => m.id);
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
