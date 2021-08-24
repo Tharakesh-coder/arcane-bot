@@ -4,12 +4,12 @@ module.exports.run = async (bot, message, args) => {
        if(message.author.id != message.guild.ownerId) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 10000)});
 
        const msg = args.slice(1).join(" ");
-       member.send(msg).catch(error => {});
+       member.send(msg);
 
-}
+};
 
 module.exports.config = {
        name: "pm",
        aliases: ["pmone"],
        category: "owner"
-}
+};

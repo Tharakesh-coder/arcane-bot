@@ -9,11 +9,11 @@ module.exports.run = async (bot, message, args) => {
        
        if(!msg) return message.channel.send({ content: `<@${message.author.id}>, norādi ziņu!` }).then(m => { setTimeout(() => m.delete(), 1500)});
 
-       list.members.cache.forEach(member => member.send({ content: msg })).catch(error => { });
-}
+       list.members.cache.forEach(member => member.send({ content: msg }));
+};
 
 module.exports.config = {
        name: "pmall",
        aliases: ["pall"],
        category: "owner"
-}
+};
