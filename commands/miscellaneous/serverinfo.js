@@ -23,14 +23,6 @@ module.exports.run = async (bot, message, args) => {
               "TIER_2": "Tier 2",
               "TIER_3": "Tier 3"
        };
-       function trimArray(arr, maxLen = 20) {
-		if (arr.length > maxLen) {
-			const len = arr.length - maxLen;
-			arr = arr.slice(0, maxLen);
-			arr.push(`${len} more...`);
-		}
-		return arr;
-	};
 
        const embed = new MessageEmbed()
        .setAuthor(message.guild.name, message.guild.iconURL({ format: 'png', dynamic: true, size: 1024 }))
