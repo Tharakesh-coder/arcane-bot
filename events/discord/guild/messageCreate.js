@@ -4,7 +4,7 @@ module.exports = async (bot, message) => {
        bot.MSGauthorIMG = message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 });
        bot.arcaneLogo = "https://i.ibb.co/GcVJ2zr/arcane.png"
 
-       if(!message.guild || message.guild.id !== 873141467999240222) return;
+       if(!message.guild || message.guild.id != 873141467999240222) return;
 
        let staffRoleUsers = message.guild.roles.cache.get('719509669088985139').members.map(m => m.user.id);
        let suggestionChannelID = "686825492057554945";
