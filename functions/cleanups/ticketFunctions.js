@@ -7,7 +7,7 @@ async function createTicketWL(interaction){
     let i = interaction;
     let server = interaction.guild;
     let tUser = interaction.user;
-    let channelName = `${tUser.username}-${tUser.discriminator}-wl`;
+    let channelName = `ticket-${tUser.username}-wl`;
     let role = server.roles.cache.find(r => r.name == "STAFF");    
     let findChannel = server.channels.cache.find(c => c.name == channelName);
 
@@ -58,7 +58,7 @@ async function createTicketIP(interaction){
     let i = interaction;
     let server = interaction.guild;
     let tUser = interaction.user;
-    let channelName = `${tUser.username}-${tUser.discriminator}-ip`;
+    let channelName = `ticket-${tUser.username}-ip`;
     let role = server.roles.cache.find(r => r.name == "STAFF");    
     let adminRole = server.roles.cache.find(r => r.name == "Admin");
     let findChannel = server.channels.cache.find(c => c.name == channelName);

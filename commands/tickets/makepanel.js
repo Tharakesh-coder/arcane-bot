@@ -3,7 +3,7 @@ const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     message.delete();
 
-    if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 150000)});
+    if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 15000)});
     let mChannel = message.mentions.channels.first();
 
     if(mChannel) args = args.slice(1).join(" "); else args.slice(0).join(" ");
@@ -38,6 +38,6 @@ module.exports.config = {
     name: "makepanel",
     aliases: ["ticketpanel"],
     category: "tickets",
-    usage: "ticketpanel (#Kanāls) <Ziņa> <",
+    usage: "ticketpanel (#Kanāls) <Ziņa>",
     description: "Aizsūta ticket paneli, noteiktajā kanālā"
 };
