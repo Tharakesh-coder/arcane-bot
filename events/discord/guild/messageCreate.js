@@ -11,10 +11,12 @@ module.exports = async (bot, message) => {
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
-              if(message.author.id == staffRoleUsers) return;
-
-              message.react("<a:6181_check:718439373233717308>");
-              message.react("<:x_:718439672467947581>");
+              if(message.author.id == staffRoleUsers){
+                     return;
+              } else {
+                     message.react("<a:6181_check:718439373233717308>");
+                     message.react("<:x_:718439672467947581>");
+              };
        };
 
        prefix = default_prefix;
