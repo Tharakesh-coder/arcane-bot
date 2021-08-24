@@ -21,9 +21,9 @@ module.exports = async (bot, message) => {
        let cmd = args.shift().toLowerCase();
        
        if (message.author.bot || !message.content.startsWith(prefix)) return;
+       if (message.content.startsWith(prefix) && message.content.length === prefix.length) return;
        let commandfile = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
        if(!commandfile) return;
        if(commandfile) commandfile.run(bot, message, args);
        
-       if (message.content.startsWith(prefix) && message.content.length === prefix.length) return;
 };
