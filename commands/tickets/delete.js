@@ -4,18 +4,18 @@ const wait = require('util').promisify(setTimeout);
 module.exports.run = async (bot, message, args) => {
     message.delete();
 
-    let role = message.member.roles.find(r => r.name === "Admin")
-    if(!role) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 15000)});
+    // let role = message.member.roles.find(r => r.name === "Admin")
+    // if(!role) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 15000)});
 
-    let deleteingEmbed = new MessageEmbed()
-    .setColor(bot.colors.red)
-    .setDescription("Šis tickets, tiks izdzēsts pēc dažām sekundēm!")
-    .setFooter(`${message.author.username}`, message.author.displayAvatarURL())
-    .setTimestamp(new Date());
+    // let deleteingEmbed = new MessageEmbed()
+    // .setColor(bot.colors.red)
+    // .setDescription("Šis tickets, tiks izdzēsts pēc dažām sekundēm!")
+    // .setFooter(`${message.author.username}`, message.author.displayAvatarURL())
+    // .setTimestamp(new Date());
 
-    message.channel.send({ embeds: [deleteingEmbed] });
-    await wait(3050)
-    await message.channel.delete()
+    // message.channel.send({ embeds: [deleteingEmbed] });
+    // await wait(3050)
+    // await message.channel.delete()
 };
 
 module.exports.config = {
