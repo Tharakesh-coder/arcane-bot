@@ -7,7 +7,7 @@ module.exports = async (bot, message) => {
        if(!message.guild) return;
        if(message.guild.id == 873141467999240222) return;
 
-       let staffRole = message.member.roles.cache.find(r => r.name === "STAFF")
+       let staffRole = message.member.roles.cache.find(r => r.name === "STAFF").catch(e => console.error(error));
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
