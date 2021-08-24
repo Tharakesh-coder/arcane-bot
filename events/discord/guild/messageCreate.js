@@ -11,7 +11,7 @@ module.exports = async (bot, message) => {
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
-              if(message.author.roles.cache.has(staffRole.id)) return;
+              if(message.member.roles.cache.has(staffRole.id)) return;
 
               message.react("<a:6181_check:718439373233717308>");
               message.react("<:x_:718439672467947581>");
