@@ -7,7 +7,9 @@ const dateNow = moment(new Date()).format("LTS");
 module.exports.run = async (bot, message, args) => {
     message.delete();
     
-    console.error(chalk`{gray [${dateNow}]} {redBright ERROR:}`, "tirlins 123")
+    // console.error(chalk`{gray [${dateNow}]} {redBright ERROR:}`, "tirlins 123")
+    new Error("tirlins123")
+
     // if(message.author.id != "286540906335830017") return message.channel.send({ content: `<@${message.author.id}>, no.` }).then(m => { setTimeout(() => m.delete(), 150)});
     // let commandName = args[0];
     // if(!commandName) return message.channel.send({ content: `<@${message.author.id}>, norādi komandu.` }).then(m => { setTimeout(() => m.delete(), 1500)});
