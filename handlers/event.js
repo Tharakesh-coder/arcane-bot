@@ -1,8 +1,4 @@
 const { readdirSync } = require("fs")
-const log = console.log;
-const moment = require('moment');
-const dateNow = moment(new Date()).format("LTS")
-const chalk = require('chalk'); 
 
 module.exports = (bot) => {
        const load = dirs => {    
