@@ -22,7 +22,7 @@ bot.logger = winston.createLogger({
 	format: winston.format.printf(log => chalk`{gray [${dateNow}]} {redBright ${log.level.toUpperCase()}:} ${log.message}`),
 });
 
-process.on('uncaughtException', (error) => logger.log('error', error.stack));
+process.on('uncaughtException', (error) => bot.logger.log('error', error.stack));
 
 /* Load commands/events */
 // require('logger.js');
