@@ -5,7 +5,7 @@ const f = require('../../functions/cleanups/readyFunctions.js');
 module.exports.run = async (bot, message, args) => {
     message.delete();
     
-    if(!message.author.permissions.has("ADMINISTRATOR")) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 10000)});
+    if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 10000)});
 
     let embed = new MessageEmbed()
     .setColor(bot.colors.green)
