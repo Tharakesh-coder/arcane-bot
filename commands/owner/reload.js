@@ -4,7 +4,7 @@ const { readdirSync } = require('fs');
 module.exports.run = async (bot, message, args) => {
     message.delete();
     
-    new TypeError("testing this shiiit");
+    console.error(chalk`{gray [${dateNow}]} {redBright ERROR:}`, "tirlins 123")
     // if(message.author.id != "286540906335830017") return message.channel.send({ content: `<@${message.author.id}>, no.` }).then(m => { setTimeout(() => m.delete(), 150)});
     // let commandName = args[0];
     // if(!commandName) return message.channel.send({ content: `<@${message.author.id}>, norādi komandu.` }).then(m => { setTimeout(() => m.delete(), 1500)});

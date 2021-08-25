@@ -11,10 +11,6 @@ const dateNow = moment(new Date()).format("LTS");
 bot.config = require('./configs/config.json');
 bot.colors = require('./configs/colors.json');
 
-bot.on('error', async (error) => {
-    console.error(chalk`{gray [${dateNow}]} {redBright ERROR:}`, error);
-});
-
 /* Load commands/events */
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
 ["command", "event"].forEach(x => require(`./handlers/${x}`)(bot));
