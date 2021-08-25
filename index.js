@@ -20,7 +20,7 @@ const logger = winston.createLogger({
 	format: winston.format.printf(log => chalk`{gray [${dateNow}]} {redBright ${log.level.toUpperCase()}:} ${log.message}`),
 });
 bot.on('error', m => logger.log('error', m));
-process.on('uncaughtException', (error) => logger.log('error', `${error}: ${error.stack}`));
+process.on('uncaughtException', (error) => logger.log('error', error.stack));
 
 /* Load commands/events */
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
