@@ -5,7 +5,7 @@ const dateNow = moment(new Date()).format("LTS");
 const bot = require('index.js');
 
 /* Configs */
-bot.logger = winston.createLogger({
+const logger = winston.createLogger({
 	transports: [ 
 		new winston.transports.Console(),
 	],
