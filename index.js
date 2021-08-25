@@ -4,25 +4,16 @@ const bot = new Client({
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION'],
     intents: 32767,
 });
-const winston = require('winston');
-const chalk = require('chalk');
-const moment = require('moment');
-const dateNow = moment(new Date()).format("LTS");
 
 /* Configs */
 bot.config = require('./configs/config.json');
 bot.colors = require('./configs/colors.json');
 
-const logger = winston.createLogger({
-	transports: [ 
-		new winston.transports.Console(),
-	],
-	format: winston.format.printf(log => chalk`{gray [${dateNow}]} {redBright ${log.level.toUpperCase()}:} ${log.message}`),
-});
-bot.on('error', m => logger.log('error', m));
+
 process.on('uncaughtException', (error) => logger.log('error', error.stack));
 
 /* Load commands/events */
+require('logger.js');
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
 ["command", "event"].forEach(x => require(`./handlers/${x}`)(bot));
 
