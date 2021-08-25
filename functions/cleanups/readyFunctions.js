@@ -23,7 +23,7 @@ async function nowReady(bot){
 };
 async function resetStatuses(bot, message){
        // Set status and activity
-       log(chalk`\n{gray [${dateNow}]} {cyan Setting statuses}{rgb(255,255,255) ...}`);
+       log(chalk`{gray [${dateNow}]} {cyan Setting statuses}{rgb(255,255,255) ...}`);
        await wait(1000);
        bot.user.setStatus('dnd');
        bot.user.setActivity("over Arcane.lv · ARCANE", {type: "WATCHING"});
@@ -32,7 +32,7 @@ async function resetStatuses(bot, message){
 };
 async function restartedBot(bot, message){
        // Set status and activity
-       log(chalk`{gray [${dateNow}]} {redBright Being restarted} by {cyan ${message.author.tag}}{rgb(255,255,255) ...}`);
+       log(chalk`\n{gray [${dateNow}]} {redBright Being restarted} by {cyan ${message.author.tag}}{rgb(255,255,255) ...}`);
 
        await wait(1500);
        await bot.destroy();
