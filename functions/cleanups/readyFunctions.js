@@ -39,7 +39,7 @@ async function restartedBot(bot, message){
        await wait(1500);
        await bot.login(bot.config.token);
 
-       log(chalk`\n{gray [${dateNow}]} {redBright Restarted}{rgb(255,255,255) !}`);
+       log(chalk`\n{gray [${dateNow}]} {redBright Restarted}{rgb(255,255,255) !}\n`);
 };
 
 
