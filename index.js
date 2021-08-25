@@ -10,7 +10,7 @@ bot.config = require('./configs/config.json');
 bot.colors = require('./configs/colors.json');
 
 
-process.on('uncaughtException', (error) => logger.log('error', error.stack));
+process.on('uncaughtException', (error) => bot.logger.log('error', error.stack));
 
 /* Load commands/events */
 require('logger.js');
