@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
        if(type == 2){
               await message.channel.send({embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 1500)});
               f.restartedBot(bot, message);
-              f.resetStatuses(bot);
+              f.resetStatuses(bot, message);
        };
 }
 
