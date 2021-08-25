@@ -1,5 +1,5 @@
 const { Client, Collection } = require("discord.js");
-const startLogger = require('./functions/cleanups/loggerFunctions');
+const startLogger = require('./functions/cleanups/loggerFunctions.js');
 const { token } = require("./configs/config.json");
 const bot = new Client({ 
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION'],

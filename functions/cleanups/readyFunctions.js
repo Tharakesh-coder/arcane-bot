@@ -22,6 +22,20 @@ async function nowReady(bot){
        log(chalk`{gray [${dateNow}]} {cyan Statuses have been set}{rgb(255,255,255) !}\n`);
 };
 
+async function setStatuses(bot){
+       // Wait till start
+       await wait(1000);
+
+       // Set status and activity
+       log(chalk`{gray [${dateNow}]} {cyan Setting statuses}{rgb(255,255,255) ...}`);
+       await wait(1000);
+       bot.user.setStatus('dnd');
+       bot.user.setActivity("over Arcane.lv · ARCANE", {type: "WATCHING"});
+       await wait(500);
+       log(chalk`{gray [${dateNow}]} {cyan Statuses have been set}{rgb(255,255,255) !}\n`);
+};
+
 module.exports = {
-       nowReady
+       nowReady,
+       setStatuses
 };
