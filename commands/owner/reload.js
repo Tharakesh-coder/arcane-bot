@@ -5,7 +5,7 @@ const moment = require('moment');
 const dateNow = moment(new Date()).format("LTS");
 
 module.exports.run = async (bot, message, args) => {
-    message.delete(s);
+    message.delete();
     
     // console.error(chalk`{gray [${dateNow}]} {redBright ERROR:}`, "tirlins 123")
     new TypeError("tirlins123");
