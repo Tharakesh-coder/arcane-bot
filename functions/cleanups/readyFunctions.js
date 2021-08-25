@@ -32,14 +32,14 @@ async function resetStatuses(bot, message){
 };
 async function restartedBot(bot, message){
        // Set status and activity
-       log(chalk`\n{gray [${dateNow}]} {redBright Being restarted} by {cyan ${message.author.tag}}{rgb(255,255,255) ...}`);
+       log(chalk`{gray [${dateNow}]} {redBright Being restarted} by {cyan ${message.author.tag}}{rgb(255,255,255) ...}`);
 
        await wait(1500);
        await bot.destroy();
        await wait(1500);
        await bot.login(bot.config.token);
 
-       log(chalk`\n{gray [${dateNow}]} {redBright Restarted}{rgb(255,255,255) !}\n`);
+       log(chalk`{gray [${dateNow}]} {redBright Restarted}{rgb(255,255,255) !}\n`);
 };
 
 
