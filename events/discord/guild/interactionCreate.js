@@ -1,5 +1,4 @@
-const wait = require('util').promisify(setTimeout);
-const f = require('../../../functions/cleanups/ticketFunctions');
+const tickets = require('../../../functions/cleanups/ticketFunctions');
 
 module.exports = async (bot, interaction) => {
     let i = interaction
@@ -7,12 +6,12 @@ module.exports = async (bot, interaction) => {
     
     /* Ticketi */
     if(i.customId === 'createticketwl'){
-		f.createTicketWL(interaction)
+		tickets.createTicketWL(interaction)
 	};
     if(i.customId === 'createticketip'){
-		f.createTicketIP(interaction)
+		tickets.createTicketIP(interaction)
 	};
     if(i.customId === 'deleteticket'){
-        f.deleteTicket(interaction)
+        tickets.deleteTicket(interaction)
     };
 };

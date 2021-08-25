@@ -51,7 +51,7 @@ module.exports.run = async (bot, message, args) => {
        .setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png' || 'gif', dynamic: true, size: 1024 }));
 
        message.channel.send({ embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 195000)});
-}
+};
 
 module.exports.config = {
        name: "userinfo",
@@ -59,4 +59,4 @@ module.exports.config = {
        category: "miscellaneous",
        description: "Uzrāda informāciju par noteikto lietotāju",
        aliases: ["whois", "ui"]
-}
+};

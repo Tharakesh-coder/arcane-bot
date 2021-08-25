@@ -5,9 +5,7 @@ const moment = require('moment');
 module.exports.run = async (bot, message, args) => {
        message.delete();
 
-       let roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
        const members = message.guild.members.cache;
-       const channels = message.guild.channels.cache;
        const emojis = message.guild.emojis.cache;
 
        let verifLevels = {
@@ -34,9 +32,7 @@ module.exports.run = async (bot, message, args) => {
        .addField("Statistika:", stripIndents`Emoji daudzums: ${emojis.size}
        Biedru daudzums: ${message.guild.memberCount}
        Cilvēki: ${members.filter(member => !member.user.bot).size}
-       Boti: ${members.filter(member => member.user.bot).size}
-       Teksta kanāli: ${channels.filter(channel => channel.type === 'text').size}
-       Balss kanāli: ${channels.filter(channel => channel.type === 'voice').size}`, true)
+       Boti: ${members.filter(member => member.user.bot).size}`, true)
        .addField("Izveidots:", `${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`, false)
        .setThumbnail(message.guild.iconURL({ format: 'png', dynamic: true, size: 1024 }))
        .setTimestamp(new Date())
