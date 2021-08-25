@@ -25,7 +25,7 @@ bot.logger = winston.createLogger({
 
 /* Load commands/events */
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
-["command", "event"].forEach(x => require(`./handlers/${x}`)(bot));
+["command", "event", "process"].forEach(x => require(`./handlers/${x}`)(bot));
 
 /* Login */
 bot.login(token);
