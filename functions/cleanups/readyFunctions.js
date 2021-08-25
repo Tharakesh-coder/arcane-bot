@@ -21,7 +21,6 @@ async function nowReady(bot){
        await wait(500);
        log(chalk`{gray [${dateNow}]} {cyan Statuses have been set}{rgb(255,255,255) !}\n`);
 };
-
 async function resetStatuses(bot, message){
        // Set status and activity
        log(chalk`\n{gray [${dateNow}]} {cyan Setting statuses}{rgb(255,255,255) ...}`);
@@ -29,9 +28,8 @@ async function resetStatuses(bot, message){
        bot.user.setStatus('dnd');
        bot.user.setActivity("over Arcane.lv · ARCANE", {type: "WATCHING"});
        await wait(500);
-       log(chalk`{gray [${dateNow}]} {cyan Statuses have been reset by}{redBright ${message.author.tag}}{rgb(255,255,255) !}\n`);
+       log(chalk`{gray [${dateNow}]} {cyan Statuses have been reset by} {redBright ${message.author.tag}}{rgb(255,255,255) !}`);
 };
-
 async function restartedBot(bot, message){
        // Set status and activity
        log(chalk`\n{gray [${dateNow}]} {redBright Being restarted} by {cyan ${message.author.tag}}{rgb(255,255,255) ...}`);
@@ -43,8 +41,6 @@ async function restartedBot(bot, message){
 
        log(chalk`\n{gray [${dateNow}]} {redBright Restarted}{rgb(255,255,255) !}`);
 };
-
-
 
 
 module.exports = {
