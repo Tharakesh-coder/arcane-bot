@@ -5,7 +5,7 @@ const dateNow = moment(new Date()).format("LTS");
 
 module.exports.run = async (bot, message, args) => {
        message.delete();
-       if(message.author.id != message.guild.ownerId) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 10000)});
+       if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send({ content: `<@${message.author.id}>, tev nav pieeju šādai darbībai!` }).then(m => { setTimeout(() => m.delete(), 10000)});
 
        let argList = args[0];
        if(!argList) return message.channel.send({ content: `<@${message.author.id}>, specify a status!` }).then(m => { setTimeout(() => m.delete(), 15000)})
