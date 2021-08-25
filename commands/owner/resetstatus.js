@@ -19,8 +19,7 @@ module.exports.run = async (bot, message, args) => {
 };
 
 module.exports.config = {
-    name: "reload",
+    name: "resetstatus",
     aliases: ["r"],
     category: "owner",
-    cooldown: 0
 }
