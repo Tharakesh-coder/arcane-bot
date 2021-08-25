@@ -4,8 +4,6 @@ const bot = new Client({
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION'],
     intents: 32767,
 });
-const moment = require('moment');
-const dateNow = moment(new Date()).format("LTS");
 
 /* Configs */
 bot.config = require('./configs/config.json');

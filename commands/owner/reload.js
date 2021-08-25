@@ -1,5 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 const { readdirSync } = require('fs');
+const chalk = require('chalk');
+const moment = require('moment');
+const dateNow = moment(new Date()).format("LTS");
 
 module.exports.run = async (bot, message, args) => {
     message.delete();
