@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .setTimestamp(new Date());
 
     await message.channel.sendTyping();
-    wait(1000)
+    await wait(1200)
     f.setStatuses(bot);
     message.channel.send({ embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 15000)});
 };
