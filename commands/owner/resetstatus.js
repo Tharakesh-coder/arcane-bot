@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js');
+const wait = require('util').promisify(setTimeout);
 const f = require('../../functions/cleanups/readyFunctions.js');
 
 module.exports.run = async (bot, message, args) => {
@@ -12,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     .setFooter(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
     .setTimestamp(new Date());
 
-    message.channel.sendTyping();
+    await message.channel.sendTyping();
     wait(1000)
     f.setStatuses(bot);
     message.channel.send({ embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 15000)});
