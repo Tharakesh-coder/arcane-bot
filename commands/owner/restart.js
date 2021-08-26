@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const wait = require('util').promisify(setTimeout);
 
 module.exports.run = async (bot, message, args) => {
@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
        let type = args[0];
 
-       let embed = new Discord.MessageEmbed()
+       let embed = new MessageEmbed()
        .setDescription(`💥 **${bot.user.username}** is restarting! 💥`)
        .setTimestamp(new Date())
        .setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
