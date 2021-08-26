@@ -10,5 +10,5 @@ module.exports = (e) => {
     log(chalk`{gray [${dateNow}]} {rgb(255,255,255) Done!}`);
     log(chalk`{gray [${dateNow}]} {red Shutting down}{rgb(255,255,255) ...}`);
     log(chalk`{gray [${dateNow}]} {red Shutdown successful}{rgb(255,255,255) !}\n`);
-    log(chalk`{gray [${dateNow}]} --- {rgb(255,255,255) Thank you and goodbye!} ---`);
+    log(chalk`{yellow ---} {rgb(255,255,255) Thank you and goodbye!} {yellow ---}`);
 };
