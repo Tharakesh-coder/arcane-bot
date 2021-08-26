@@ -24,6 +24,5 @@ async function nowReady(bot){
 
 
 module.exports = {
-       nowReady,
-       restartedBot
+       nowReady
 };
