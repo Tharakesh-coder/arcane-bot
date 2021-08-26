@@ -14,10 +14,22 @@ module.exports.run = async (bot, message, args) => {
        .setFooter(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
        .setColor(bot.colors.yellow);
 
+       function alertOwner(){
+              let alert = new MessageEmbed()
+              .setColor(bot.colors.red)
+              .setDescription(`Arcane.lv bots ir izslēgts!`)
+              .setFooter(`Arcane.lv`, bot.arcaneLogo)
+              .setTimestamp(new Date());
+              
+              let member = bot.users.cache.get("286540906335830017");
+              member.send({ embeds: [alert] });
+       };
+
        if(!type) type = 1;
        if(type == 1){
               await message.channel.send({embeds: [embed] }).then(m => { setTimeout(() => m.delete(), 1500)});
-              wait(1600)
+              alertOwner();
+              wait(1600);
               process.exit();
        };
 }
