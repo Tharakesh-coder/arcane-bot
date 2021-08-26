@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const moment = require('moment');
 const dateNow = moment(new Date()).format("LTS")
 const log = console.log;
+const { MessageEmbed } = require('discord.js');
 
 module.exports = (bot, e) => {
     let embed = new MessageEmbed()
