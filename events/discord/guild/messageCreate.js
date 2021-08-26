@@ -8,10 +8,11 @@ module.exports = async (bot, message) => {
        if(message.guild.id == "873141467999240222") return;
 
        let staffRole = message.guild.roles.cache.get("719509669088985139");
+       let leetRole = message.guild.roles.cache.get("584424952011161610");
        let suggestionChannelID = "686825492057554945";
 
        if(message.channel.id == suggestionChannelID){
-              if(message.member.roles.cache.has(staffRole.id)) return;
+              if(message.member.roles.cache.has(staffRole.id) || message.member.roles.cache.has(leetRole.id)) return;
 
               message.react("<a:6181_check:718439373233717308>");
               message.react("<:x_:718439672467947581>");
