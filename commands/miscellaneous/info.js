@@ -6,11 +6,11 @@ module.exports.run = async (bot, message, args) => {
 
     let embed = new MessageEmbed()
     .setColor(bot.colors.yellow)
-    .setAuthor("Arcane.lv", bot.arcaneLogo)
-    .setDescription(stripIndents`[Mājaslapa](http://arcane.lv/)
-    [Forums](http://arcane.lv/forum/)
-    [Whitelist anketa](http://arcane.lv/register)
-    [PayPal](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=U4L5F8US2S4A8&source=url)`)
+    .setAuthor("Arcane.lv informācija", bot.arcaneLogo)
+    .setDescription(stripIndents`Mūsu [**Mājaslapa**](http://arcane.lv/)
+    Mūsu [**Forums**](http://arcane.lv/forum/)
+    Mūsu [**Whitelist anketa**](http://arcane.lv/register)
+    Mūsu [**PayPal**](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=U4L5F8US2S4A8&source=url)`)
     .setFooter(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
     .setTimestamp(new Date());
 
