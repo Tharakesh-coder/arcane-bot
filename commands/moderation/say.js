@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
        let mChannel = message.mentions.channels.first();
 
        if(mChannel){
-              args = args.slice(1).join(" ");
+              args = args.slice(1).join("/ +/");
               mChannel.send({ content: args });
        } else {
               args = args.join(" ");
